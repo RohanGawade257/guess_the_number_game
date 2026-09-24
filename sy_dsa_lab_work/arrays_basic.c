@@ -23,6 +23,25 @@ void insertion(int arr[],int n ){
     }
 }
 
+void update(int arr[],int n){
+    int pos;
+    int val;
+
+    printf("\nenter the position from %d elements you want to update: ",n);
+    scanf("%d",&pos);
+
+    printf("enter the the updated value for %d position: ",pos);
+    scanf("%d",&val);
+
+    arr[pos-1] = val;
+
+    printf("\nyour updated values are; ");
+    for(int i=0; i<n; i++){
+        printf("%d",arr[i]);
+    }
+
+}
+
 int main(){
 
     int arr[50];
@@ -41,6 +60,6 @@ int main(){
         printf("%d",arr[i]);
     }
 
-    insertion(arr,n);
+    update(arr,n);
     return 0;
 }
